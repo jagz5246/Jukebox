@@ -1,0 +1,198 @@
+@import "./_variables";
+@import "./flexbox";
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Ubuntu', sans-serif;;
+}
+
+.background{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url("https://images.pexels.com/photos/290660/pexels-photo-290660.jpeg?crop=entropy&cs=srgb&dl=pexels-pixabay-290660.jpg&fit=crop&fm=jpg&h=768&w=1366");   
+    height: 100%;
+    background-size: cover;
+}
+
+.banner{
+    padding-top: 20px;
+    background-color: rgb(14, 11, 11);  
+}
+
+#home{
+    right: 0px;
+    top: 40px;
+    border-style: none;
+    padding: 5px 35px 5px 10px;
+    font-size: 3ex;
+    background: $add-color;
+    position: fixed;
+}
+
+#title{
+    margin-top: 20%;
+    text-align: center;
+    color: white;
+    font-size: 76px;
+}
+
+#desc{
+    text-align: center;
+    font-weight: 20px;
+    color: rgba(214, 214, 214, 0.5);
+}
+
+.btn-flex{
+    margin-top: 20px;
+    @include flexCenter;
+}
+
+.btn-flex a{
+    color: $primary-color;
+}
+
+.btn-flex button{
+    font-size: 15px;
+    padding: 15px;
+    margin: 5px;
+    border-style: none;
+    background: rgb(24, 24, 143);
+    border-radius: 12px;
+    &:hover{
+        transition: 2s;
+        background-color: black;
+    }
+}
+
+h1{ 
+    padding-bottom: 40px;
+    position: fixed;
+    font-family: sans-serif;;
+    color: white;
+    margin: 40px;
+}
+
+h2{ 
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.container{
+    @include flexCenter();    
+}
+
+.content{
+
+    border-radius: 5px;
+    border-color: $primary-color;
+    margin: 50px;
+    width: 200px;
+
+    img{
+        margin-bottom: 10px;
+        width: 200px;
+        height: 180px;
+    }
+    h3{
+        
+        color: $primary-color;
+    }
+    p{  
+        padding: 5px;
+        color: $secondary-color;
+    }
+    button{
+        padding: 12px;
+        border-style: none;
+        border-radius: 1px;
+    &:hover{
+        transition: 2s;
+        background: black;
+    }
+}
+
+}
+.add{
+    margin-top: 5px;
+    background: $add-color;
+    font-size: 2.4ex;
+
+}
+.play{
+    font-size: 2.4ex;
+    background: $primary-btn;
+    a{
+    color: $primary-color;
+    }
+}
+
+
+a{
+    color: $primary-color;
+    text-decoration: none;
+}
+
+h2{
+    color: $primary-color;
+    text-align: center;
+}
+
+.artists-flex{
+    @include flexColumn();
+
+}
+
+.cover{
+
+    padding: 10px;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    border-color: $primary-color;
+    margin: 150px 20px 0 20px;
+    width: 200px;
+    box-shadow: 3px 3px 3px black;
+
+    img{
+        border-radius: 1px;
+        margin: 20px 0px 0px 20px;
+        width: 150px;
+        height: 150px;
+    }
+    .artist-name{ 
+        font-weight: bolder;
+        font-size: 20px;
+        text-align: center;
+        color: whitesmoke;
+    }
+    h3{
+       
+        text-align: left;
+        color: rgba(66, 122, 206, 0.877);
+        font-weight: lighter;
+    }
+    p{  
+        margin: 2px 0px 5px 10px;
+        text-align: center;
+        color: $secondary-color;
+    }
+    ul{
+        justify-content: center;
+        margin-left: 22px;
+    }
+    li{
+        font-size: 14px;
+        padding: 2px;
+        list-style-type: disc;;
+        color: $primary-color;
+    }
+    
+}
+
+@media(max-width:768px){
+    .artists-flex{
+        @include flexColumn-wrap();
+    
+    }
+    
+}
