@@ -10,6 +10,17 @@
   height: 100%;
   background-size: cover;
 }
+@media (max-width: 768px) {
+  .background {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("https://images.pexels.com/photos/290660/pexels-photo-290660.jpeg?crop=entropy&cs=srgb&dl=pexels-pixabay-290660.jpg&fit=crop&fm=jpg&h=768&w=1366");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.pexels.com/photos/290660/pexels-photo-290660.jpeg?crop=entropy&cs=srgb&dl=pexels-pixabay-290660.jpg&fit=crop&fm=jpg&h=768&w=1366");
+    height: 100%;
+    padding-bottom: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
 
 .banner {
   padding-top: 20px;
